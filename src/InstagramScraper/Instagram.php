@@ -1275,6 +1275,11 @@
             return $stories;
         }
 
+        /**
+         * @param $story_id
+         * @param $owner_id
+         * @return bool
+         */
         function seeStory($story_id, $owner_id)
         {
             $data = [
