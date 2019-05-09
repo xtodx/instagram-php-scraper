@@ -20,6 +20,7 @@ class Story extends Media
      * @param $prop
      * @param $arr
      */
+
     protected function initPropertiesCustom($value, $prop, $arr)
     {
         if (!empty($this->skip_prop[$prop])) {
