@@ -1299,6 +1299,18 @@
             }
         }
 
+        public function follow($account_id)
+        {
+            $url = Endpoints::getFollowUrl($account_id);
+            $response = Request::post($url,
+                $this->generateHeaders($this->userSession));
+            if ($response->code !== static::HTTP_OK) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
         /**
          * @param bool $force
          * @param bool $support_two_step_verification
