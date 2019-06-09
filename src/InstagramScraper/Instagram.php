@@ -368,7 +368,7 @@
                 ]);
 
                 $response = Request::get(Endpoints::getAccountMediasJsonLink($variables),
-                    $this->generateHeaders($this->userSession, $this->generateGisToken($variables)));
+                    $this->generateHeaders($this->userSession));
 
                 if (static::HTTP_OK !== $response->code) {
                     throw new InstagramException('Response code is ' . $response->code . '. Body: ' . static::getErrorBody($response->body) . ' Something went wrong. Please report issue.',
